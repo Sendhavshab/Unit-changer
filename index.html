@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script src="assignment.js">
+      function showresult(event){
+    num = document.getElementById('input').value;
+    mydiv = document.getElementById('mydiv');
+    mydiv.innerHTML = '';
+    select1 = document.getElementById('select1').value;
+    select2 = document.getElementById('select2'). value;
+    num = num / select2;
+    
+    mydiv.innerHTML = ` answer is ${num * select1} `
+}
+ 
+    </script>
+    
+<input id="input" type="number" placeholder="Tipe here!">
+
+     <select id="select1" name="cars" id="cars">
+        <option value="10">CENTIMETRES</option>
+        <option value="1">MILIMITER</option>
+        <option value="1000" selected>MITERS</option>
+        <option value="1000000">KILOMETRES</option>
+    </select>
+    
+    <select id="select2" name="cars" id="cars">
+        <option value="10">CENTIMETRES</option>
+        <option value="1">MILIMITER</option>
+        <option value="1000" selected>MITERS</option>
+        <option value="1000000">KILOMETRES</option>
+    </select>
+    <button onclick="showresult(event)">Confirm</button>
+    <div id="mydiv"></div>
+    <style>
+        body{
+            display:flex;
+            gap:20px;
+            flex-direction:column;
+            background:#9ceacd29;
+            padding:10px;
+            }
+            select1 ,select2 ,button ,#input{
+               border:2px dotted black;
+               padding:10px;
+                border-radius: 20px;
+            }
+            div{
+                color:blue;
+                font-weight:
+            }
+    </style>
+</body>
+</html>
